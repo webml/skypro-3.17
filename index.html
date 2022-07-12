@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pin code</title>
+    <link rel="stylesheet" href="node_modules\pincode-input\dist\pincode-input.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="loader">
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <form class="form pincode__create-form">
+            <h1 class="header pincode__create-header">Придумайте пинкод</h1>
+            <input type="text" class="input pincode__create-input" placeholder="1234">
+            <button type="submit" class="btn pincode__create-btn">Сохранить</button>
+        </form>
+
+        <form class="form form_none pincode__enter-form">
+            <h1 class="header pincode__enter-header">Введите пинкод</h1>
+            <div class="pincode__enter-input"></div>
+            <button type="submit" class="btn pincode__enter-btn">Войти</button>
+            <button class="btn_passive pincode__enter-delete">Сбросить пинкод</button>
+        </form>
+        <div class="message result"></div>
+    </main>
+    <footer>
+        <p>Сделал Михаил Любарец</p>
+    </footer>
+
+    <script src="node_modules\pincode-input\dist\pincode-input.min.js"></script>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
