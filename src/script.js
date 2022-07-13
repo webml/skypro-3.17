@@ -14,15 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
   loader.classList.add("loader_none");
 });
 
-const validator = new RegExp("^[0-9]+$");
+const pinValidator = new RegExp("^[0-9]+$");
 
 pinCrtInput.addEventListener("input", () => {
-  if (!validator.test(pinCrtInput.value)) {
+  if (!pinValidator.test(pinCrtInput.value)) {
     message.textContent = "Пинкод должен состоять из цифр";
     pinCrtBtn.setAttribute("disabled", "disabled");
   }
 
-  if (validator.test(pinCrtInput.value)) {
+  if (pinValidator.test(pinCrtInput.value)) {
     pinCrtBtn.removeAttribute("disabled", "disabled");
     message.innerHTML = "";
   }
